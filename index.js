@@ -1,30 +1,30 @@
-const One=(callback)=>{
-console.log("one");
-callback();
-}
-const Two=(callback)=>{
-setTimeout(()=>{
-    console.log("two");
-    callback();
-},2000);
+// const One=(callback)=>{
+// console.log("one");
+// callback();
+// }
+// const Two=(callback)=>{
+// setTimeout(()=>{
+//     console.log("two");
+//     callback();
+// },2000);
 
 
-}
-const Three=(callback)=>{
-console.log("three");
-callback();
-}
-const Four=()=>{
-console.log("four");
-}
+// }
+// const Three=(callback)=>{
+// console.log("three");
+// callback();
+// }
+// const Four=()=>{
+// console.log("four");
+// }
 
-One(()=>{
-    Two(()=>{
-        Three(()=>{
-            Four();
-        });
-    });
-});
+// One(()=>{
+//     Two(()=>{
+//         Three(()=>{
+//             Four();
+//         });
+//     });
+// });
 
 
 
@@ -48,3 +48,31 @@ One(()=>{
 //   callback(y);
 // }
 // print(6,square);
+
+
+const One=(callbcak)=>{
+    console.log("I am one");
+    callbcak();
+}
+const Two=( callback)=>{
+    setTimeout(()=>{
+        console.log("I am two. data loading");
+        callback();
+    },2000);
+    
+}
+const Three=(callback)=>{
+    console.log("I am three");
+    callback();
+}
+const Four=()=>{
+    console.log("I am four"); 
+}
+
+One(()=>{
+    Two(()=>{
+        Three(()=>{
+            Four();
+        });
+    });
+});
